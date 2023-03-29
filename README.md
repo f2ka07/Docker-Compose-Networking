@@ -2,7 +2,12 @@
 
 Docker Compose provides a flexible networking model that enables you to connect your containers in various ways. These network types range from the default bridge network to custom networks that can be defined and managed according to specific requirements. Each network type offers unique benefits, and choosing the appropriate network type is crucial for optimizing performance, security, and scalability. In this context, it is essential to understand the different network types available in Docker Compose and their use cases. There following are the types of networks that can be set up in Docker Compose. 
 
-1. **Bridge network:** This is the default network type used by Docker Compose. It allows containers to communicate with each other using their container names as hostnames.
+## Bridge network  
+This is the default network type used by Docker Compose. It allows containers to communicate with each other using their container names as hostnames. 
+A bridge network in Docker Compose is a private internal network created by Docker, where containers can communicate with each other. The bridge network is the default network type used by Docker Compose. When a container is started within a Compose project, it is automatically attached to the bridge network. Each container on the bridge network has a unique IP address assigned by Docker. Communication between containers on the same bridge network is done using container names as hostnames, and containers can communicate with each other using their assigned IP addresses as well.
+
+Here's an example of a simple Docker Compose file that sets up a bridge network:
+
 
 2. **Host network:** This network mode allows containers to share the same network namespace as the host system.
 
